@@ -1,0 +1,127 @@
+\documentclass[a4paper,14pt]{extarticle}
+
+% кодировка и язык
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+%математика
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+
+%графики
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+%оформление страницы
+\usepackage{geometry}
+\geometry{left=3cm, right=1.5cm, top=2cm, bottom=2cm}
+
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{indentfirst}
+\usepackage{ragged2e}
+\justifying
+
+\pagestyle{plain}
+
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{2ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.5ex plus 1ex minus .2ex}{0.8ex plus .2ex}
+
+%гиперссылки и библиография
+\usepackage[hidelinks]{hyperref}
+\usepackage[backend=biber, style=gost-numeric]{biblatex}
+\addbibresource{refs.bib}
+
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\E}{\mathbb{E}}
+
+\begin{document}
+
+% титульник
+\begin{titlepage}
+    \thispagestyle{empty}
+
+   
+    \begin{center}
+        {\small
+        МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКИЙ\\
+        ФЕДЕРАЦИИ\par}
+        \vspace{0.5cm}
+
+        {\small
+        Федеральное государственное автономное образовательное учреждение\\
+        высшего образования\par}
+        \vspace{0.3cm}
+
+        {\small
+        <<Национальный исследовательский Нижегородский государственный\\
+        университет им. Н.И. Лобачевского>>\par}
+        \vspace{0.5cm}
+
+        {\small Радиофизический Факультет\par}
+        \vspace{0.2cm}
+        {\small Кафедра статистической радиофизики и мобильных систем связи\par}
+        \vspace{0.2cm}
+        {\small Специальность <<Фундаментальная информатика и информационные технологии>>\par}
+
+        \vspace{1.5cm}
+
+        
+        {\bfseries\small
+        ОТЧЁТ ПО ПРОИЗВОДСТВЕННОЙ ПРАКТИКЕ\\
+        (ПРАКТИКЕ ПО ПОЛУЧЕНИЮ ПРОФЕССИОНАЛЬНЫХ УМЕНИЙ И\\
+        ОПЫТА ПРОФЕССИОНАЛЬНОЙ ДЕЯТЕЛЬНОСТИ)\par}
+
+        \vspace{0.8cm}
+
+        {\bfseries\large
+        ОЦЕНИВАНИЕ КАНАЛОВ СВЯЗИ И ЭКВАЛИЗАЦИИ СИГНАЛА 
+        (ОЦЕНИВАНИЕ ИНФОРМАЦИОННЫХ СИГНАЛОВ)\par}
+
+        \vspace{2.5cm}
+    \end{center}
+
+   
+    \begin{flushleft}
+        \hspace{1.5cm}
+        \begin{minipage}{0.85\textwidth}
+            \small
+            Руководитель практики,\\
+            доцент, к.ф.-м.н.
+            \hfill
+            \rule{4cm}{0.4pt} Болховская О.В.
+            
+            \vspace{1.5cm}
+            
+            Студент 3-го курса
+            \hfill
+            \rule{4cm}{0.4pt} Коннова Е.А.
+        \end{minipage}
+    \end{flushleft}
+
+    \vfill
+
+   
+    \begin{center}
+        {\small Нижний Новгород, 2026\par}
+    \end{center}
+\end{titlepage}
+
+%разделы
+\input{sections/01_intro}
+\input{sections/02_channel}
+\input{sections/03_estimation}
+\input{sections/04_conclusion}
+
+% список литературы
+\newpage
+\printbibliography[title={Список литературы}]
+
+\end{document}
