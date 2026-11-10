@@ -28,9 +28,20 @@
 \pagestyle{plain}
 
 \usepackage{titlesec}
-\titleformat{\section}{\normalfont\large\bfseries}{\thesection.}{0.5em}{}
-\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+% Настройка главных разделов: с новой страницы, по центру, без точки в конце
+\titleformat{\section}
+    {\normalfont\large\bfseries\centering} % \centering выравнивает по центру
+    {\thesection.} % Автоматический номер (1., 2. и т.д.)
+    {0.5em}
+    {}
 \titlespacing*{\section}{0pt}{2ex plus 1ex minus .2ex}{1ex plus .2ex}
+
+% Настройка подразделов: выравнивание по левому краю, жирный
+\titleformat{\subsection}
+    {\normalfont\normalsize\bfseries}
+    {\thesubsection.}
+    {0.5em}
+    {}
 \titlespacing*{\subsection}{0pt}{1.5ex plus 1ex minus .2ex}{0.8ex plus .2ex}
 
 %гиперссылки и библиография
@@ -114,6 +125,10 @@
     \end{center}
 \end{titlepage}
 
+%содержание
+\tableofcontents
+\newpage
+
 %разделы
 \input{sections/01_intro}
 \input{sections/02_channel}
@@ -123,5 +138,6 @@
 % список литературы
 \newpage
 \printbibliography[title={Список литературы}]
+\addcontentsline{toc}{section}{СПИСОК ЛИТЕРАТУРЫ}
 
 \end{document}
